@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import '../../features/about/widgets/about_section.dart';
-import '../../features/contact/widgets/contact_section.dart';
-import '../../features/experience/widgets/experience_section.dart';
-import '../../features/footer/widgets/footer_widget.dart';
-import '../../features/hero/widgets/hero_section.dart';
-import '../../features/navbar/widgets/navbar_widget.dart';
-import '../../features/projects/widgets/projects_section.dart';
-import '../../features/skills/widgets/skills_section.dart';
-import '../../core/constants/app_strings.dart';
+import 'package:my_portfolio/core/constants/app_strings.dart';
+import 'package:my_portfolio/features/about/widgets/about_section.dart';
+import 'package:my_portfolio/features/contact/widgets/contact_section.dart';
+import 'package:my_portfolio/features/experience/widgets/experience_section.dart';
+import 'package:my_portfolio/features/footer/widgets/footer_widget.dart';
+import 'package:my_portfolio/features/hero/widgets/hero_section.dart';
+import 'package:my_portfolio/features/navbar/widgets/navbar_mobile_drawer.dart';
+import 'package:my_portfolio/features/navbar/widgets/navbar_widget.dart';
+import 'package:my_portfolio/features/projects/widgets/projects_section.dart';
+import 'package:my_portfolio/features/skills/widgets/skills_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -51,7 +52,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: MobileDrawer(
+      endDrawer: NavbarMobileDrawer(
         sectionKeys: _sectionKeys,
         scrollController: _scrollController,
       ),
@@ -59,15 +60,12 @@ class _HomePageState extends State<HomePage> {
         bottom: false,
         child: Stack(
           children: [
-            // ── Scrollable content ────────────────────────────────────────
             SingleChildScrollView(
               controller: _scrollController,
               child: Column(
                 children: [
-                  // Hero (also anchors "Home")
                   SizedBox(key: _sectionKeys['Home'], height: 0),
                   HeroSection(onViewProjects: _scrollToProjects),
-
                   _SectionWrapper(
                     sectionKey: _sectionKeys['About']!,
                     child: const AboutSection(),
@@ -94,8 +92,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-
-            // ── Fixed navbar overlay ──────────────────────────────────────
             Positioned(
               top: 0,
               left: 0,
