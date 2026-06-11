@@ -13,7 +13,6 @@ A modern and responsive portfolio website built with Flutter Web to showcase my 
 <p align="center">
   <img src="assets/home.png" width="100%" />
 </p>
----
 
 ## ✨ Features
 
@@ -62,34 +61,6 @@ Sneakers e-commerce application built with Flutter.
 
 ---
 
-## 🧑‍💻 Getting Started
-
-Clone the repository:
-
-```bash
-git clone https://github.com/20Mahmoud06/My-Portfolio.git
-```
-
-Install dependencies:
-
-```bash
-flutter pub get
-```
-
-Run locally:
-
-```bash
-flutter run -d chrome
-```
-
-Build for web:
-
-```bash
-flutter build web
-```
-
----
-
 ## 📬 Contact
 
 📧 Email: mahmoudsafa220@gmail.com
@@ -100,6 +71,3 @@ https://linkedin.com/in/20mahmoud-safa06
 🐙 GitHub:
 https://github.com/20Mahmoud06
 
----
-
-⭐ If you like this project, feel free to star the repository.
