@@ -14,15 +14,17 @@ class ProjectsGrid extends StatelessWidget {
     final cols = isMobile ? 1 : 2;
 
     final screenWidth = MediaQuery.sizeOf(context).width;
-    final mobileExtent = screenWidth < 400 ? 400.0 : 420.0;
+    final mobileExtent = isMobile
+        ? (screenWidth < 360 ? 520.0 : screenWidth < 400 ? 480.0 : 460.0)
+        : 460.0;
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: cols,
-        crossAxisSpacing: 24,
+        crossAxisSpacing: isMobile ? 0 : 24,
         mainAxisSpacing: 24,
-        mainAxisExtent: isMobile ? mobileExtent : 460,
+        mainAxisExtent: mobileExtent,
       ),
       itemCount: projects.length,
       itemBuilder: (context, index) {

@@ -79,6 +79,7 @@ class _ContactRowState extends State<ContactRow> {
               Expanded(
                 child: Text(
                   widget.label,
+                  overflow: TextOverflow.ellipsis,
                   style: GoogleFonts.inter(
                     fontSize: 15,
                     fontWeight:

@@ -139,6 +139,8 @@ class _ExperienceTimelineItemState extends State<ExperienceTimelineItem> {
                             children: [
                               Text(
                                 widget.entry.title,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
                                 style: GoogleFonts.inter(
                                   fontSize: 16,
                                   fontWeight: FontWeight.w700,
@@ -150,6 +152,8 @@ class _ExperienceTimelineItemState extends State<ExperienceTimelineItem> {
                               const SizedBox(height: 4),
                               Text(
                                 widget.entry.organization,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
                                 style: GoogleFonts.inter(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,

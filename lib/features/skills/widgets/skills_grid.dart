@@ -19,7 +19,7 @@ class SkillsGrid extends StatelessWidget {
         crossAxisCount: isMobile ? 1 : 2,
         crossAxisSpacing: isMobile ? 16 : 24,
         mainAxisSpacing: isMobile ? 16 : 24,
-        mainAxisExtent: isMobile ? 260 : (isTablet ? 300 : 280),
+        mainAxisExtent: isMobile ? 280 : (isTablet ? 300 : 280),
       ),
       itemCount: categories.length,
       itemBuilder: (context, index) {

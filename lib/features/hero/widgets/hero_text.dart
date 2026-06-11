@@ -76,8 +76,6 @@ class _HeroTextState extends State<HeroText> {
     final align = widget.centerAlign ? TextAlign.center : TextAlign.start;
     final crossAlign =
         widget.centerAlign ? CrossAxisAlignment.center : CrossAxisAlignment.start;
-    final mainAlign =
-        widget.centerAlign ? MainAxisAlignment.center : MainAxisAlignment.start;
     final activeLine = AppStrings.heroBioLines[_lineIndex];
     final typedText = activeLine.substring(0, _charIndex);
 
@@ -179,21 +177,22 @@ class _HeroTextState extends State<HeroText> {
             .fadeIn(duration: 600.ms, delay: 1000.ms)
             .slideY(begin: 0.3, end: 0, duration: 600.ms, delay: 1000.ms),
         const SizedBox(height: 32),
-        Row(
-          mainAxisAlignment: mainAlign,
+        Wrap(
+          spacing: 12,
+          runSpacing: 12,
+          alignment:
+              widget.centerAlign ? WrapAlignment.center : WrapAlignment.start,
           children: [
             HeroSocialIcon(
               assetPath: 'assets/images/github_logo.jpg',
               label: 'GitHub',
               url: AppStrings.github,
             ),
-            const SizedBox(width: 12),
             HeroSocialIcon(
               assetPath: 'assets/images/linkedin_logo.png',
               label: 'LinkedIn',
               url: AppStrings.linkedin,
             ),
-            const SizedBox(width: 12),
             HeroSocialIcon(
               icon: Icons.email_rounded,
               label: 'Email',

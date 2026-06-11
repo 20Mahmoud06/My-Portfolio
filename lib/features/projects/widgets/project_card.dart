@@ -85,6 +85,7 @@ class _ProjectCardState extends State<ProjectCard> {
                       Expanded(
                         child: Text(
                           p.title,
+                          overflow: TextOverflow.ellipsis,
                           style: GoogleFonts.inter(
                             fontSize: 18,
                             fontWeight: FontWeight.w700,

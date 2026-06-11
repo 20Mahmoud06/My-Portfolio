@@ -203,7 +203,9 @@ class _ProjectDetails extends StatelessWidget {
               .toList(),
         ),
         const SizedBox(height: 24),
-        Row(
+        Wrap(
+          spacing: 12,
+          runSpacing: 12,
           children: [
             GlowButton(
               label: 'GitHub',
@@ -211,7 +213,6 @@ class _ProjectDetails extends StatelessWidget {
               onPressed: () => launchProjectUrl(p.githubUrl),
               color: p.accentColor,
             ),
-            const SizedBox(width: 12),
             GlowButton(
               label: 'Download APK',
               icon: Icons.download_rounded,

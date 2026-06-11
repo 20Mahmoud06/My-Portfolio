@@ -95,8 +95,10 @@ class ContactCard extends StatelessWidget {
               Text(
                 "Let's Build Something Great",
                 textAlign: TextAlign.center,
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 style: GoogleFonts.inter(
-                  fontSize: 28,
+                  fontSize: isMobile ? 24 : 28,
                   fontWeight: FontWeight.w800,
                   color: isDark ? AppColors.darkText : AppColors.lightText,
                 ),
