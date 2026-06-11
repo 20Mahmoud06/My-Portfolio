@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assetshome.png" width="100%" />
+</p>
+
 # 🌐 Mahmoud Safa Portfolio
 
 A modern and responsive portfolio website built with Flutter Web to showcase my projects, skills, and experience as a Flutter Developer.
