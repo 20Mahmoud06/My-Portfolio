@@ -11,7 +11,7 @@ A modern and responsive portfolio website built with Flutter Web to showcase my 
 ## 📸 Preview
 
 <p align="center">
-  <img src="assetshome.png" width="100%" />
+  <img src="assets/home.png" width="100%" />
 </p>
 ---
 
