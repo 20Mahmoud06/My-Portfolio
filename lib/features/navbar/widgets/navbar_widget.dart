@@ -110,15 +110,18 @@ class _NavbarWidgetState extends State<NavbarWidget> {
             padding: EdgeInsets.symmetric(horizontal: hPad),
             child: Row(
               children: [
-                ShaderMask(
-                  shaderCallback: (bounds) =>
-                      AppColors.primaryGradient.createShader(bounds),
-                  child: Text(
-                    AppStrings.name,
-                    style: GoogleFonts.inter(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
+                Flexible(
+                  child: ShaderMask(
+                    shaderCallback: (bounds) =>
+                        AppColors.primaryGradient.createShader(bounds),
+                    child: Text(
+                      AppStrings.name,
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.inter(
+                        fontSize: isDesktop ? 18 : 16,
+                        fontWeight: FontWeight.w800,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

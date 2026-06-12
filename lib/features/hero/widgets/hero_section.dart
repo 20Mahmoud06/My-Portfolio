@@ -72,6 +72,10 @@ class _HeroSectionState extends State<HeroSection>
     final heroRoleSize = isDesktop ? 22.0 : (isTablet ? 20.0 : 18.0);
     final heroImageSize = isDesktop ? 320.0 : (isTablet ? 260.0 : screenWidth * 0.6).clamp(160.0, 260.0);
 
+    final topPad = MediaQuery.of(context).padding.top;
+    final navH = isDesktop ? AppDimensions.navbarHeight : AppDimensions.navbarHeightMobile;
+    final heroTop = topPad + navH;
+
     return SizedBox(
       width: double.infinity,
       height: math.max(screenHeight, isDesktop ? 700 : 640),
@@ -108,7 +112,7 @@ class _HeroSectionState extends State<HeroSection>
             ),
             Padding(
               padding: EdgeInsets.only(
-                top: AppDimensions.navbarHeight,
+                top: heroTop,
                 left: hPad,
                 right: hPad,
                 bottom: AppDimensions.xxl,

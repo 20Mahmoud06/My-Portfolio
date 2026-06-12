@@ -150,7 +150,7 @@ class _HeroTextState extends State<HeroText> {
             .animate()
             .fadeIn(duration: 600.ms, delay: 800.ms)
             .slideY(begin: 0.3, end: 0, duration: 600.ms, delay: 800.ms),
-        const SizedBox(height: 44),
+        SizedBox(height: widget.centerAlign ? 32 : 44),
         Wrap(
           alignment:
               widget.centerAlign ? WrapAlignment.center : WrapAlignment.start,
@@ -176,7 +176,7 @@ class _HeroTextState extends State<HeroText> {
             .animate()
             .fadeIn(duration: 600.ms, delay: 1000.ms)
             .slideY(begin: 0.3, end: 0, duration: 600.ms, delay: 1000.ms),
-        const SizedBox(height: 32),
+        SizedBox(height: widget.centerAlign ? 24 : 32),
         Wrap(
           spacing: 12,
           runSpacing: 12,

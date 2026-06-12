@@ -70,9 +70,9 @@ class HeroMobileLayout extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const SizedBox(height: 32),
+          const SizedBox(height: 20),
           HeroProfileImage(glowController: glowController, size: imageSize, mouseOffset: mouseOffset),
-          const SizedBox(height: 32),
+          const SizedBox(height: 24),
           HeroText(
             onViewProjects: onViewProjects,
             onLaunch: onLaunch,

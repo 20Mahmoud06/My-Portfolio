@@ -56,10 +56,8 @@ class _HomePageState extends State<HomePage> {
         sectionKeys: _sectionKeys,
         scrollController: _scrollController,
       ),
-      body: SafeArea(
-        bottom: false,
-        child: Stack(
-          children: [
+      body: Stack(
+          children: <Widget>[
             SingleChildScrollView(
               controller: _scrollController,
               child: Column(
@@ -103,8 +101,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ],
         ),
-      ),
-    );
+      );
   }
 }
 
