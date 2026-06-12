@@ -143,15 +143,16 @@ class _ExperienceTimelineItemState extends State<ExperienceTimelineItem> {
                     const SizedBox(height: 12),
                     if (widget.entry.linkLabel != null &&
                         widget.entry.linkUrl != null)
-                      RichText(
-                        text: TextSpan(
+                      Text.rich(
+                        TextSpan(
                           style: theme.textTheme.bodyMedium?.copyWith(
                             height: 1.6,
                           ),
                           children: [
                             TextSpan(text: '${widget.entry.description} '),
                             TextSpan(
-                              text: widget.entry.linkLabel!,
+                              text: widget.entry.linkLabel!.replaceAll(
+                                  '_', '_\u{200B}'),
                               style: GoogleFonts.inter(
                                 fontSize: 14,
                                 fontWeight: FontWeight.w700,
@@ -164,6 +165,7 @@ class _ExperienceTimelineItemState extends State<ExperienceTimelineItem> {
                             ),
                           ],
                         ),
+                        softWrap: true,
                       )
                     else
                       Text(

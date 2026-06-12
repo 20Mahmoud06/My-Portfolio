@@ -46,6 +46,7 @@ class _GlowButtonState extends State<GlowButton> {
           width: widget.width,
           height: widget.height,
           padding: const EdgeInsets.symmetric(horizontal: 28),
+          clipBehavior: Clip.antiAlias,
           decoration: widget.outlined
               ? BoxDecoration(
                   borderRadius: BorderRadius.circular(100),
@@ -111,12 +112,15 @@ class _GlowButtonState extends State<GlowButton> {
                       ),
                 const SizedBox(width: 8),
               ],
-              Text(
-                widget.label,
-                style: GoogleFonts.inter(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: widget.outlined ? effectiveColor : Colors.white,
+              Flexible(
+                child: Text(
+                  widget.label,
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.inter(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                    color: widget.outlined ? effectiveColor : Colors.white,
+                  ),
                 ),
               ),
             ],
