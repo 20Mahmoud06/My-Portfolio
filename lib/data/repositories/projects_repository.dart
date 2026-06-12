@@ -32,7 +32,7 @@ class ProjectsRepository {
           'Kutuku is a modern e-commerce application built with Flutter, '
           'focused on delivering exceptional mobile shopping experiences '
           'through performant code, smooth UI interactions, and clean app structure.',
-      imagePath: 'assets/images/kutuku_screenshot.png',
+      imagePath: 'assets/images/kutuku_screenshot.jpg',
       technologies: ['Flutter', 'Provider', 'Clean UI'],
       githubUrl: 'https://github.com/20Mahmoud06/Kutuku',
       apkUrl:
@@ -49,7 +49,7 @@ class ProjectsRepository {
           'Flash Chat is a modern Flutter chat app with Firebase real-time '
           'messaging, secure authentication, smart contact sync, push '
           'notifications, media & voice-note sharing, and voice & video calls.',
-      imagePath: 'assets/images/flashchat_screenshot.png',
+      imagePath: 'assets/images/flashchat_screenshot.jpg',
       technologies: ['Flutter', 'Firebase', 'Push Notifications'],
       githubUrl: 'https://github.com/20Mahmoud06/Flash-Chat',
       apkUrl:
@@ -67,7 +67,7 @@ class ProjectsRepository {
           'Times, Qibla Compass, Quran reading, Hadith collection, '
           'Morning & Evening Azkar, 99 Names of Allah, Hijri Calendar, '
           'Notifications, and a Digital Tasbih counter.',
-      imagePath: 'assets/images/muslim_screenshot.png',
+      imagePath: 'assets/images/muslim_screenshot.jpg',
       technologies: ['Flutter', 'Dart', 'Local Features'],
       githubUrl: 'https://github.com/20Mahmoud06/muslim',
       apkUrl:
