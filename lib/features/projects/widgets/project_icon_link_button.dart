@@ -36,7 +36,7 @@ class _ProjectIconLinkButtonState extends State<ProjectIconLinkButton> {
           message: widget.tooltip,
           child: AnimatedContainer(
             duration: const Duration(milliseconds: 200),
-            width: 30,
+            width: 20,
             height: 30,
             padding: EdgeInsets.all(widget.assetPath == null ? 6 : 5),
             decoration: BoxDecoration(
