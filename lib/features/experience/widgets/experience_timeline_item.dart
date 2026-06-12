@@ -114,6 +114,7 @@ class _ExperienceTimelineItemState extends State<ExperienceTimelineItem> {
                 duration: const Duration(milliseconds: 200),
                 margin: EdgeInsets.only(bottom: widget.isLast ? 0 : cardSpacing),
                 padding: EdgeInsets.all(cardPadding),
+                clipBehavior: Clip.antiAlias,
                 decoration: BoxDecoration(
                   borderRadius:
                       BorderRadius.circular(AppDimensions.radiusLg),
@@ -169,6 +170,8 @@ class _ExperienceTimelineItemState extends State<ExperienceTimelineItem> {
                         widget.entry.description,
                         style:
                             theme.textTheme.bodyMedium?.copyWith(height: 1.6),
+                        maxLines: 4,
+                        overflow: TextOverflow.ellipsis,
                       ),
                   ],
                 ),

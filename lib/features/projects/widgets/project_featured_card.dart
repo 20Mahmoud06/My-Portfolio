@@ -32,6 +32,7 @@ class _ProjectFeaturedCardState extends State<ProjectFeaturedCard> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         transform: Matrix4.translationValues(0.0, _hovered ? -4.0 : 0.0, 0.0),
+        clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppDimensions.radiusXl),
           color: isDark ? AppColors.darkSurface : Colors.white,
@@ -206,6 +207,8 @@ class _ProjectDetails extends StatelessWidget {
         Wrap(
           spacing: 12,
           runSpacing: 12,
+          alignment: WrapAlignment.center,
+          runAlignment: WrapAlignment.center,
           children: [
             GlowButton(
               label: 'GitHub',

@@ -30,6 +30,7 @@ class _ProjectCardState extends State<ProjectCard> {
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         transform: Matrix4.translationValues(0.0, _hovered ? -8.0 : 0.0, 0.0),
+        clipBehavior: Clip.antiAlias,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppDimensions.radiusXl),
           color: isDark ? AppColors.darkSurface : Colors.white,
