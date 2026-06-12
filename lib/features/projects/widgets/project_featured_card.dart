@@ -153,6 +153,7 @@ class _ProjectDetails extends StatelessWidget {
     final theme = Theme.of(context);
     final isDark = theme.brightness == Brightness.dark;
     final p = project;
+    final isMobile = ResponsiveLayout.isMobile(context);
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,27 +205,48 @@ class _ProjectDetails extends StatelessWidget {
               .toList(),
         ),
         const SizedBox(height: 24),
-        Wrap(
-          spacing: 12,
-          runSpacing: 12,
-          alignment: WrapAlignment.center,
-          runAlignment: WrapAlignment.center,
-          children: [
-            GlowButton(
-              label: 'GitHub',
-              assetIcon: 'assets/images/github_logo.jpg',
-              onPressed: () => launchProjectUrl(p.githubUrl),
-              color: p.accentColor,
-            ),
-            GlowButton(
-              label: 'Download APK',
-              icon: Icons.download_rounded,
-              outlined: true,
-              onPressed: () => launchProjectUrl(p.apkUrl),
-              color: p.accentColor,
-            ),
-          ],
-        ),
+        if (isMobile)
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              GlowButton(
+                label: 'GitHub',
+                assetIcon: 'assets/images/github_logo.jpg',
+                onPressed: () => launchProjectUrl(p.githubUrl),
+                color: p.accentColor,
+              ),
+              const SizedBox(height: 12),
+              GlowButton(
+                label: 'Download APK',
+                icon: Icons.download_rounded,
+                outlined: true,
+                onPressed: () => launchProjectUrl(p.apkUrl),
+                color: p.accentColor,
+              ),
+            ],
+          )
+        else
+          Wrap(
+            spacing: 12,
+            runSpacing: 12,
+            alignment: WrapAlignment.center,
+            runAlignment: WrapAlignment.center,
+            children: [
+              GlowButton(
+                label: 'GitHub',
+                assetIcon: 'assets/images/github_logo.jpg',
+                onPressed: () => launchProjectUrl(p.githubUrl),
+                color: p.accentColor,
+              ),
+              GlowButton(
+                label: 'Download APK',
+                icon: Icons.download_rounded,
+                outlined: true,
+                onPressed: () => launchProjectUrl(p.apkUrl),
+                color: p.accentColor,
+              ),
+            ],
+          ),
       ],
     );
   }

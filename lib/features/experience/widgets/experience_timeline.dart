@@ -12,6 +12,7 @@ class ExperienceTimeline extends StatelessWidget {
   Widget build(BuildContext context) {
     final isMobile = ResponsiveLayout.isMobile(context);
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: entries.asMap().entries.map((e) {
         final isLast = e.key == entries.length - 1;
         return AnimatedSection(

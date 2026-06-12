@@ -35,7 +35,10 @@ class ExperienceSection extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 60),
-              ExperienceTimeline(entries: entries),
+              SizedBox(
+                width: double.infinity,
+                child: ExperienceTimeline(entries: entries),
+              ),
             ],
           ),
         ),
