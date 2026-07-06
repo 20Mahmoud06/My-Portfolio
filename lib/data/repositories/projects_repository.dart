@@ -71,7 +71,7 @@ class ProjectsRepository {
       technologies: ['Flutter', 'Dart', 'Local Features'],
       githubUrl: 'https://github.com/20Mahmoud06/muslim',
       apkUrl:
-          'https://drive.google.com/file/d/1AS0MCEo4Vg5GtDyea-u_aFNxr9fzjaOa/view?usp=drive_link',
+          'https://drive.google.com/file/d/1tMFDtmO15ZbDQzcm7BGgS1NRidNC5wqI/view?usp=drive_link',
       isFeatured: true,
       accentColor: const Color(0xFF22D3EE),
     ),
