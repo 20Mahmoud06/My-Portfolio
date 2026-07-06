@@ -23,6 +23,7 @@ class ProjectsRepository {
       isFeatured: true,
       accentColor: const Color(0xFF42A5F5),
     ),
+
     ProjectModel(
       id: 'kutuku',
       title: 'Kutuku',
@@ -40,6 +41,7 @@ class ProjectsRepository {
       isFeatured: true,
       accentColor: const Color(0xFF34D399),
     ),
+    
     ProjectModel(
       id: 'flash_chat',
       title: 'Flash Chat',
