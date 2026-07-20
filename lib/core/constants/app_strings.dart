@@ -8,7 +8,7 @@ class AppStrings {
   static const String location = 'Port Said, Egypt';
   static const String university = 'Suez Canal University';
   static const String degree = 'Faculty of Computers and Information';
-  static const String gpa = '3.45';
+  static const String gpa = '3.47';
 
   static const String heroBio =
       'Computer Science Student passionate about building beautiful, '
