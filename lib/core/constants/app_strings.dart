@@ -66,7 +66,7 @@ class AppStrings {
 
   // ── Stats ────────────────────────────────────────────────────────────────
   static const List<Map<String, String>> stats = [
-    {'value': '4', 'label': 'Flutter Apps'},
+    {'value': '5', 'label': 'Flutter Apps'},
     {'value': '3+', 'label': 'Flutter Communities'},
     {'value': '1+', 'label': 'Years Learning Flutter'},
   ];
